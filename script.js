@@ -1,4 +1,4 @@
-document.getElementById("searchPart").style.display="none";
+// document.getElementById("searchPart").style.display="none";
 document.getElementById("lyricsSection").style.display="none"
 document.getElementById("fancy").style.display="none"
 document.getElementById("searchBtn").addEventListener("click",function(){
@@ -9,15 +9,15 @@ document.getElementById("searchBtn").addEventListener("click",function(){
 .then(data=>{
     
     for (let i = 0; i < 10; i++) {
-        const title = data.data[i].album.title;
+        const title = data.data[i].title;
         const artistName=data.data[i].artist.name;
        
         // console.log(title);
         // console.log(artistName)
         document.getElementsByClassName("title")[i].innerHTML=title;
         document.getElementsByClassName("artistName")[i].innerHTML=artistName;
-        document.getElementById("searchPart").style.display="block";
-        document.getElementById("fancy").style.display="none"
+        // document.getElementById("searchPart").style.display="block";
+        document.getElementById("fancy").style.display="block"
        
     
 
